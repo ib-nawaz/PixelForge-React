@@ -1,9 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import "./App.css";
-
 import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
-
 import { DarkWhite } from "./Components/Conetxt/context"; //context
 
 import Navbar from "./Components/Navbar";
