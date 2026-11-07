@@ -72,61 +72,37 @@ const Home = () => {
                 </div>
 
 
-                {/* Trusted Companies */}
-                <div className='w-full py-14 px-6 m'>
 
-                    <h2 className={`text-xl md:text-4xl font-bold text-center text-slate-900 m ${darkMode ? "text-white" : "text-black"}`}>
-                        Trusted By{" "}
-                        <span className="text-purple-600">Leading Companies</span>
+                <div className={`trusted-section ${darkMode ? "trusted-dark" : "trusted-light"}`}>
+                    <h2 className="trusted-heading">
+                        Trusted By <span>Leading Companies</span>
                     </h2>
 
+                    <div className="trusted-container">
 
-                    {/* LOGOS */}
-                    <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-5 px-5 sm:px-6">
-
-                        {/* Google */}
-                        <div className={`flex items-center justify-center gap-3 py-6 px-4 rounded-2xl border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${darkMode
-                            ? "bg-white/5 border-white/10 hover:bg-white/10 hover:border-blue-400/40 hover:shadow-blue-500/10"
-                            : "bg-white border-blue-100 hover:bg-blue-50 hover:border-blue-300 hover:shadow-blue-200/50"
-                            }`}>
-                            <SiGoogle size={36} className="text-[#4285F4] shrink-0" />
-                            <span className={`text-lg font-semibold ${darkMode ? "text-white" : "text-slate-800"}`}>Google</span>
+                        <div className="trusted-card trusted-google">
+                            <SiGoogle />
+                            <span>Google</span>
                         </div>
 
-                        {/* Apple */}
-                        <div className={`flex items-center justify-center gap-3 py-6 px-4 rounded-2xl border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${darkMode
-                            ? "bg-white/5 border-white/10 hover:bg-white/10 hover:border-slate-400/40 hover:shadow-slate-500/10"
-                            : "bg-white border-slate-200 hover:bg-slate-50 hover:border-slate-400 hover:shadow-slate-200/50"
-                            }`}>
-                            <SiApple size={36} className={`shrink-0 ${darkMode ? "text-white" : "text-black"}`} />
-                            <span className={`text-lg font-semibold ${darkMode ? "text-white" : "text-slate-800"}`}>Apple</span>
+                        <div className="trusted-card trusted-apple">
+                            <SiApple />
+                            <span>Apple</span>
                         </div>
 
-                        {/* Spotify */}
-                        <div className={`flex items-center justify-center gap-3 py-6 px-4 rounded-2xl border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${darkMode
-                            ? "bg-white/5 border-white/10 hover:bg-white/10 hover:border-green-400/40 hover:shadow-green-500/10"
-                            : "bg-white border-green-100 hover:bg-green-50 hover:border-green-300 hover:shadow-green-200/50"
-                            }`}>
-                            <SiSpotify size={36} className="text-[#1DB954] shrink-0" />
-                            <span className={`text-lg font-semibold ${darkMode ? "text-white" : "text-slate-800"}`}>Spotify</span>
+                        <div className="trusted-card trusted-spotify">
+                            <SiSpotify />
+                            <span>Spotify</span>
                         </div>
 
-                        {/* Netflix */}
-                        <div className={`flex items-center justify-center gap-3 py-6 px-4 rounded-2xl border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${darkMode
-                            ? "bg-white/5 border-white/10 hover:bg-white/10 hover:border-red-400/40 hover:shadow-red-500/10"
-                            : "bg-white border-red-100 hover:bg-red-50 hover:border-red-300 hover:shadow-red-200/50"
-                            }`}>
-                            <SiNetflix size={36} className="text-[#E50914] shrink-0" />
-                            <span className={`text-lg font-semibold ${darkMode ? "text-white" : "text-slate-800"}`}>Netflix</span>
+                        <div className="trusted-card trusted-netflix">
+                            <SiNetflix />
+                            <span>Netflix</span>
                         </div>
 
-                        {/* Meta */}
-                        <div className={`flex items-center justify-center gap-3 py-6 px-4 rounded-2xl border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl col-span-2 md:col-span-1 md:mx-0 mx-auto w-full max-w-[240px] ${darkMode
-                            ? "bg-white/5 border-white/10 hover:bg-white/10 hover:border-blue-400/40 hover:shadow-blue-500/10"
-                            : "bg-white border-blue-100 hover:bg-blue-50 hover:border-blue-300 hover:shadow-blue-200/50"
-                            }`}>
-                            <SiMeta size={36} className="text-[#0866FF] shrink-0" />
-                            <span className={`text-lg font-semibold ${darkMode ? "text-white" : "text-slate-800"}`}>Meta</span>
+                        <div className="trusted-card trusted-meta">
+                            <SiMeta />
+                            <span>Meta</span>
                         </div>
 
                     </div>

@@ -23,6 +23,12 @@
     padding: 0 3vw;
 }
 
+.pxb {
+    padding: 6px;
+}
+
+
+
 /* Main Section */
 .services-section {
     padding: 30px 20px;
@@ -90,3 +96,198 @@
 
 
 
+
+/* TRUSTED COMPANIES */
+
+.trusted-section {
+    width: 100%;
+    padding: 56px 24px;
+    box-sizing: border-box;
+}
+
+.trusted-heading {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.trusted-heading span {
+    color: #9333ea;
+}
+
+.trusted-container {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.trusted-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 24px 16px;
+    border: 1px solid;
+    border-radius: 16px;
+
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.trusted-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(147, 51, 234, 0.12);
+}
+
+.trusted-card svg {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+}
+
+.trusted-card span {
+    font-size: 18px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* GOOGLE */
+.trusted-google svg {
+    color: #4285F4;
+}
+
+/* APPLE */
+.trusted-apple svg {
+    color: inherit;
+}
+
+/* SPOTIFY */
+.trusted-spotify svg {
+    color: #1DB954;
+}
+
+/* NETFLIX */
+.trusted-netflix svg {
+    color: #E50914;
+}
+
+/* META */
+.trusted-meta svg {
+    color: #0866FF;
+}
+
+/* LIGHT MODE */
+.trusted-light .trusted-card {
+    background: #ffffff;
+    border-color: #e5e7eb;
+    color: #1e293b;
+}
+
+.trusted-light .trusted-google:hover {
+    background: #eff6ff;
+    border-color: #93c5fd;
+}
+
+.trusted-light .trusted-apple:hover {
+    background: #f8fafc;
+    border-color: #94a3b8;
+}
+
+.trusted-light .trusted-spotify:hover {
+    background: #f0fdf4;
+    border-color: #86efac;
+}
+
+.trusted-light .trusted-netflix:hover {
+    background: #fef2f2;
+    border-color: #fca5a5;
+}
+
+.trusted-light .trusted-meta:hover {
+    background: #eff6ff;
+    border-color: #93c5fd;
+}
+
+/* DARK MODE */
+.trusted-dark .trusted-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.trusted-dark .trusted-card:hover {
+    background: rgba(255, 255, 255, 0.09);
+}
+
+.trusted-dark .trusted-google:hover {
+    border-color: rgba(96, 165, 250, 0.5);
+}
+
+.trusted-dark .trusted-apple:hover {
+    border-color: rgba(148, 163, 184, 0.5);
+}
+
+.trusted-dark .trusted-spotify:hover {
+    border-color: rgba(74, 222, 128, 0.5);
+}
+
+.trusted-dark .trusted-netflix:hover {
+    border-color: rgba(248, 113, 113, 0.5);
+}
+
+.trusted-dark .trusted-meta:hover {
+    border-color: rgba(96, 165, 250, 0.5);
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    .trusted-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .trusted-section {
+        padding: 45px 15px;
+    }
+
+    .trusted-heading {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .trusted-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        padding: 0 5px;
+    }
+
+    .trusted-card {
+        gap: 8px;
+        padding: 20px 8px;
+    }
+
+    .trusted-card svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .trusted-card span {
+        font-size: 14px;
+    }
+
+    .trusted-meta {
+        grid-column: 1 / -1;
+        width: 50%;
+        justify-self: center;
+    }
+}

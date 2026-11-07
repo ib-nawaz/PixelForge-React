@@ -1,8 +1,8 @@
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
-import { DarkWhite } from "./Components/Conetxt/context"; //context
+import { DarkWhite } from "./Components/Conetxt/context";
 
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
@@ -14,66 +14,72 @@ import Footer from "./Components/Footer";
 import NotFound from "./Components/NotFound";
 import ScrollToTop from "./Components/ScrollToTop";
 
+// Layout Component
+function Layout() {
+  const { darkMode } = React.useContext(DarkWhite);
+
+  return (
+    <div
+      className={`min-h-screen transition-colors duration-300 ${darkMode ? "bg-black text-white" : "bg-white text-black"
+        }`}
+    >
+      <ScrollToTop />
+      <Navbar />
+      <Outlet />
+      <Footer />
+    </div>
+  );
+}
+
+// Router
+const router = createBrowserRouter([
+  {
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: (
+          <>
+            <Home />
+            <Services />
+            <OurWork />
+            <OurTeam />
+            <Contact />
+          </>
+        )
+      },
+      {
+        path: "/home",
+        element: <Home />,
+      },
+      {
+        path: "/services",
+        element: <Services />,
+      },
+      {
+        path: "/ourwork",
+        element: (
+          <>
+            <OurWork />
+            <OurTeam />
+          </>
+        ),
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
+        path: "*",
+        element: <NotFound />,
+      },
+    ],
+  },
+]);
+
+// App Component
 function App() {
   const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
-
-  }, [darkMode])
-
-
-  const Layout = () => {
-    return (
-      <div
-        className={`min-h-screen transition-colors duration-300 ${darkMode
-          ? "bg-black text-white"
-          : "bg-white text-black"
-          }`}
-      >
-        <ScrollToTop />
-        <Navbar />
-        <Outlet />
-        <Footer />
-      </div>
-    );
-  };
-
-  const router = createBrowserRouter([
-    {
-      element: <Layout />,
-      children: [
-        {
-          path: "/",
-          element: <Home />
-        },
-        {
-          path: "/home",
-          element: <Home />
-        },
-        {
-          path: "/services",
-          element: <Services />
-        },
-        {
-          path: "/ourwork",
-          element: (
-            <>
-              <OurWork />
-              <OurTeam />
-            </>
-          )
-        },
-        {
-          path: "/contact",
-          element: <Contact />
-        },
-        {
-          path: "*",
-          element: <NotFound />
-        }
-      ]
-    }
-  ]);
 
   return (
     <DarkWhite.Provider value={{ darkMode, setDarkMode }}>

@@ -1,0 +1,271 @@
+/* CONTACT SECTION */
+
+.contact-section {
+    width: 100%;
+    padding: 80px 24px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* HEADING */
+
+.contact-heading {
+    font-size: 48px;
+    font-weight: 800;
+    color: #9333ea;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.contact-description {
+    font-size: 17px;
+    color: #6b7280;
+    line-height: 1.8;
+    margin-bottom: 45px;
+}
+
+.contact-description span {
+    display: block;
+    color: #9333ea;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+/* FORM */
+
+.contact-form {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+/* NAME + EMAIL */
+
+.contact-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.contact-field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+}
+
+.contact-field label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #6b21a8;
+}
+
+/* INPUT + TEXTAREA */
+
+.contact-field input,
+.contact-field textarea {
+    width: 100%;
+    padding: 15px 18px;
+    border: 1px solid #e9d5ff;
+    border-radius: 12px;
+    outline: none;
+    font-size: 15px;
+    font-family: inherit;
+    box-sizing: border-box;
+    background: #faf5ff;
+    color: #1f2937;
+    transition: all 0.3s ease;
+}
+
+.contact-field input {
+    height: 55px;
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+    color: #9ca3af;
+}
+
+/* FOCUS */
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+    border-color: #9333ea;
+    box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.12);
+    background: #ffffff;
+}
+
+/* MESSAGE */
+
+.contact-message {
+    margin-top: 25px;
+}
+
+.contact-field textarea {
+    width: 100%;
+    min-height: 250px;
+    resize: vertical;
+    line-height: 1.7;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .contact-section {
+        padding: 70px 30px;
+    }
+
+    .contact-heading {
+        font-size: 42px;
+    }
+
+    .contact-description {
+        font-size: 16px;
+    }
+
+    .contact-form {
+        max-width: 700px;
+    }
+
+    .contact-row {
+        gap: 18px;
+    }
+
+    .contact-field input,
+    .contact-field textarea {
+        padding: 14px 16px;
+    }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .contact-section {
+        padding: 50px 18px;
+    }
+
+    .contact-heading {
+        font-size: 32px;
+        letter-spacing: -0.5px;
+        margin-bottom: 16px;
+    }
+
+    .contact-description {
+        font-size: 14px;
+        line-height: 1.8;
+        margin-bottom: 32px;
+    }
+
+    .contact-description span {
+        font-size: 17px;
+    }
+
+    .contact-form {
+        max-width: 100%;
+    }
+
+    .contact-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact-field label {
+        font-size: 14px;
+    }
+
+    .contact-field input {
+        height: 52px;
+        font-size: 14px;
+    }
+
+    .contact-field textarea {
+        min-height: 200px;
+        font-size: 14px;
+    }
+
+    .contact-message {
+        margin-top: 22px;
+    }
+
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+
+    .contact-section {
+        padding: 45px 14px;
+    }
+
+    .contact-heading {
+        font-size: 28px;
+    }
+
+    .contact-description {
+        font-size: 13px;
+    }
+
+    .contact-description span {
+        font-size: 15px;
+    }
+
+    .contact-field input,
+    .contact-field textarea {
+        padding: 13px;
+    }
+
+}
+
+
+/* SUBMIT BUTTON */
+
+.contact-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 15px 28px;
+    margin-top: 28px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: linear-gradient(135deg, #9333ea, #7e22ce);
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+    font-family: inherit;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(147, 51, 234, 0.3);
+    background: linear-gradient(135deg, #a855f7, #9333ea);
+}
+
+.contact-submit:active {
+    transform: scale(0.96);
+}
+
+/* ARROW */
+
+.contact-submit-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.contact-submit:hover .contact-submit-icon {
+    transform: translateX(5px);
+}

@@ -1,0 +1,196 @@
+
+/* SERVICES SECTION */
+
+.services-section {
+    width: 100%;
+    padding: 80px 24px;
+    box-sizing: border-box;
+}
+
+/* HEADING */
+
+.services-heading {
+    max-width: 850px;
+    margin: 0 auto 60px;
+}
+
+.services-heading h1 {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    margin-bottom: 20px;
+}
+
+.services-heading p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-top: 4px;
+}
+
+/* GRID */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    max-width: 1100px;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+/* CARDS */
+
+.services-card {
+    width: 100%;
+    max-width: 500px;
+    padding: 32px;
+    box-sizing: border-box;
+    border-radius: 24px;
+    border: 1px solid;
+    transition: all 0.3s ease;
+}
+
+/* LIGHT MODE */
+
+.services-light .services-card {
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #faf5ff,
+        #ffffff
+    );
+    border-color: #e9d5ff;
+    color: #111827;
+}
+
+.services-light .services-card:hover {
+    border-color: #c084fc;
+    box-shadow: 0 20px 40px rgba(147, 51, 234, 0.12);
+}
+
+/* DARK MODE */
+
+.services-dark .services-card {
+    background: linear-gradient(
+        135deg,
+        #1b122b,
+        #211532,
+        #181020
+    );
+    border-color: #3b2455;
+    color: white;
+}
+
+.services-dark .services-card:hover {
+    border-color: #9333ea;
+    box-shadow: 0 20px 40px rgba(147, 51, 234, 0.2);
+}
+
+/* ICON */
+
+.services-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #f3e8ff;
+    color: #9333ea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.services-card:hover .services-icon {
+    background: #9333ea;
+    color: white;
+    transform: rotate(-5deg);
+}
+
+/* ARROW */
+
+.services-card svg:last-child {
+    transition: all 0.3s ease;
+}
+
+/* TITLE */
+
+.services-title {
+    margin-top: 28px;
+    margin-bottom: 14px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* DESCRIPTION */
+
+.services-description {
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .services-section {
+        padding: 65px 20px;
+    }
+
+    .services-grid {
+        gap: 22px;
+    }
+
+    .services-card {
+        padding: 26px;
+    }
+
+    .services-heading h1 {
+        font-size: 40px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .services-section {
+        padding: 50px 18px;
+    }
+
+    .services-heading {
+        margin-bottom: 40px;
+    }
+
+    .services-heading h1 {
+        font-size: 32px;
+        letter-spacing: -1px;
+    }
+
+    .services-heading p {
+        font-size: 14px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 420px;
+    }
+
+    .services-card {
+        padding: 24px;
+        max-width: 100%;
+    }
+
+    .services-icon {
+        width: 52px;
+        height: 52px;
+    }
+
+    .services-title {
+        font-size: 21px;
+        margin-top: 22px;
+    }
+
+    .services-description {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+}
