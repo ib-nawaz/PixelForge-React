@@ -8,6 +8,7 @@ import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
 import Services from "./Components/Services";
 import OurWork from "./Components/OurWork";
+import OurTeam from "./Components/OurTeam";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import NotFound from "./Components/NotFound";
@@ -55,7 +56,12 @@ function App() {
         },
         {
           path: "/ourwork",
-          element: <OurWork />
+          element: (
+            <>
+              <OurWork />
+              <OurTeam />
+            </>
+          )
         },
         {
           path: "/contact",

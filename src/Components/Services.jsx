@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { ChartNoAxesCombined, ArrowUpRight, PenTool, Share2, FileText } from 'lucide-react'
+import { ChartNoAxesCombined, ArrowUpRight, GlobeCode, Share2, FileText } from 'lucide-react'
 import { DarkWhite } from "./Conetxt/context";
 
 const services = [
@@ -22,7 +22,7 @@ const services = [
       "Words that tell your story, communicate your value, and turn readers into loyal customers."
   },
   {
-    icon: PenTool,
+    icon: GlobeCode,
     title: "Social Media",
     description:
       "Create conversations, grow your community, and keep your brand top of mind."
@@ -57,8 +57,8 @@ const Services = () => {
       {/* Cards */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 services-grid">
 
-        {services.map((service, index) => {
-          const Icon = service.icon
+        {services.map((item, index) => {
+          const Icon = item.icon
 
           return (
             <div
@@ -91,12 +91,12 @@ const Services = () => {
               </div>
 
               <h3 className={`text-xl md:text-2xl font-semibold text-gray-900 services-title ${darkMode ? "text-white" : ""}`}>
-                {service.title}
+                {item.title}
               </h3>
 
               <p className={`text-gray-500 leading-7 services-description
                 ${darkMode ? "text-white" : ""}`}>
-                {service.description}
+                {item.description}
               </p>
 
             </div>
