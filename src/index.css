@@ -22,3 +22,68 @@
 .pxx {
     padding: 0 3vw;
 }
+
+/* Main Section */
+.services-section {
+    padding: 30px 20px;
+}
+
+/* Heading Spacing */
+.services-heading {
+    margin-bottom: 35px;
+}
+
+/* Cards Gap */
+.services-grid {
+    gap: 18px;
+}
+
+/* Individual Card Padding */
+.services-card {
+    padding: 22px;
+    border-radius: 22px;
+}
+
+/* Circle Icon */
+.services-icon {
+    width: 54px;
+    height: 54px;
+}
+
+/* Title Margin */
+.services-title {
+    margin-top: 18px;
+}
+
+/* Description Margin */
+.services-description {
+    margin-top: 8px;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .services-section {
+        padding: 35px 16px;
+    }
+
+    .services-heading {
+        margin-bottom: 25px;
+    }
+
+    .services-card {
+        padding: 18px;
+    }
+
+    .services-grid {
+        gap: 14px;
+    }
+
+    .services-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .services-title {
+        margin-top: 14px;
+    }
+}
