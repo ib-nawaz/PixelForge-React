@@ -1,15 +1,20 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { NavLink } from "react-router-dom";
 import "./Footer.css";
 import { DarkWhite } from './Conetxt/context';
-
-
+import toast from 'react-hot-toast';
 import { FaInstagram, FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 import { Layers3 } from "lucide-react";
 
 const Footer = () => {
 
     const { darkMode } = useContext(DarkWhite)
+    const [subs, setsubs] = useState("")
+
+    function Handle() {
+        setsubs("")
+        toast.success("ThankYou For Subscribe Us!")
+    }
 
     return (
 
@@ -66,10 +71,13 @@ const Footer = () => {
                         <input
                             type="email"
                             placeholder="Enter your email address"
+                            value={subs}
+                            onChange={(e) => setsubs(e.target.value)}
                             required
                         />
 
-                        <button type="submit">
+                        <button type="submit"
+                            onClick={Handle}>
                             Subscribe
                         </button>
                     </form>
