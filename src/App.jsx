@@ -1,7 +1,7 @@
 
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./App.css";
-import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
+import { RouterProvider, createBrowserRouter, Outlet, } from "react-router-dom";
 import { DarkWhite } from "./Components/Conetxt/context";
 
 import Navbar from "./Components/Navbar";
@@ -15,16 +15,20 @@ import NotFound from "./Components/NotFound";
 import ScrollToTop from "./Components/ScrollToTop";
 import Privacy from "./Components/Privacy";
 
-// Layout Component
+import { Toaster } from "react-hot-toast";
+
+
 function Layout() {
-  const { darkMode } = React.useContext(DarkWhite);
+  const { darkMode } = useContext(DarkWhite);
 
   return (
     <div
-      className={`min-h-screen transition-colors duration-300 ${darkMode ? "bg-black text-white" : "bg-white text-black"
-        }`}
-    >
+      className={`min-h-screen transition-colors duration-300 ${darkMode
+        ? "bg-black text-white"
+        : "bg-white text-black"
+        }`}>
       <ScrollToTop />
+
       <Navbar />
       <Outlet />
       <Footer />
@@ -32,7 +36,7 @@ function Layout() {
   );
 }
 
-// Router
+
 const router = createBrowserRouter([
   {
     element: <Layout />,
@@ -47,16 +51,21 @@ const router = createBrowserRouter([
             <OurTeam />
             <Contact />
           </>
-        )
+        ),
       },
+
+
       {
         path: "/home",
         element: <Home />,
       },
+
       {
         path: "/services",
         element: <Services />,
       },
+
+
       {
         path: "/ourwork",
         element: (
@@ -66,28 +75,44 @@ const router = createBrowserRouter([
           </>
         ),
       },
+
       {
         path: "/contact",
         element: <Contact />,
       },
+
+
+      {
+        path: "/privacy",
+        element: <Privacy />,
+      },
+
+
       {
         path: "*",
         element: <NotFound />,
       },
-      {
-        path: '/privacy',
-        element: <Privacy />
-      }
     ],
   },
 ]);
 
-// App Component
+
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <DarkWhite.Provider value={{ darkMode, setDarkMode }}>
+    <DarkWhite.Provider value={{ darkMode, setDarkMode, }}>
+      <Toaster
+        position="top-left"
+        toastOptions={{
+          style: {
+            background: darkMode ? "white" : "red",
+            color: darkMode ? "black" : "white",
+            maxWidth: "none",
+            width: "max-content",
+          },
+        }}
+      />
       <RouterProvider router={router} />
     </DarkWhite.Provider>
   );
