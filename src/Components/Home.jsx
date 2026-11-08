@@ -18,7 +18,7 @@ const Home = () => {
             <section className="w-full min-h-[85vh] flex flex-col items-center pt-[3vh] pb-16 px-4">
 
                 {/* Trusted Badge */}
-                <div className="mt flex items-center gap-4 w-fit max-w-full px-3 sm:px-5 py-3.5 rounded-full border border-violet-300/50 bg-white shadow-lg">
+                <div className="mt flex items-center gap-4 w-fit max-w-full px-3 sm:px-5 py-3.5 rounded-full border border-violet-300/50 bg-white shadow-lg z-10">
 
                     {/* Avatars */}
                     <div className="relative shrink-0 w-[108px] h-9">
