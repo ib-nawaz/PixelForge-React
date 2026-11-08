@@ -23,7 +23,7 @@ function Layout() {
 
   return (
     <div
-      className={`min-h-screen transition-colors duration-300 ${darkMode
+      className={`min-h-screen min-w-screen  transition-colors duration-300 ${darkMode
         ? "bg-black text-white"
         : "bg-white text-black"
         }`}>
@@ -106,7 +106,7 @@ function App() {
         position="top-left"
         toastOptions={{
           style: {
-            background: darkMode ? "white" : "red",
+            background: darkMode ? "white" : "black",
             color: darkMode ? "black" : "white",
             maxWidth: "none",
             width: "max-content",

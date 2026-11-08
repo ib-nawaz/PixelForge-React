@@ -39,6 +39,7 @@
     margin: 0 auto;
     text-align: left;
     box-sizing: border-box;
+    position: relative;
 }
 
 /* NAME + EMAIL */
@@ -268,4 +269,10 @@
 
 .contact-submit:hover .contact-submit-icon {
     transform: translateX(5px);
+}
+
+.msgT {
+    position: absolute;
+    bottom: 7vh;
+    right: 0;
 }

@@ -6,14 +6,17 @@ import toast from "react-hot-toast";
 
 const Contact = () => {
 
+  const [length, setlength] = useState("")
+
   const [result, setResult] = useState("");
+
   const onSubmit = async (event) => {
     event.preventDefault();
-    setResult("Sending....");
+
     const formData = new FormData(event.target);
 
     formData.append("access_key", "fad7f993-f733-43db-b0fa-4b401433f11e");
-    
+
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -26,6 +29,7 @@ const Contact = () => {
       if (data.success) {
         toast.success("Form Submitted Successfully");
         event.target.reset();
+        setlength("")
       } else {
         setResult(data.message);
       }
@@ -34,6 +38,10 @@ const Contact = () => {
       toast.error("Error", data);
     }
   };
+
+  function HandleLength(e) {
+    setlength(e.target.value);
+  }
 
   return (
     <div className="contact-section">
@@ -91,9 +99,13 @@ const Contact = () => {
               rows={10}
               cols={30}
               required
+              maxLength={1050}
+              value={length}
+              onChange={HandleLength}
             />
 
           </div>
+          <p className="msgT">{length.length}/1050</p>
 
           {/* SUBMIT BUTTON */}
           <button
