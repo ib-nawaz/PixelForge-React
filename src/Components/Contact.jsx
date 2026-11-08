@@ -34,6 +34,7 @@ const Contact = () => {
                 placeholder="Enter your name"
                 value={name}
                 onChange={(e) => setname(e.target.value)}
+                required
               />
             </div>
 
@@ -44,6 +45,7 @@ const Contact = () => {
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setemail(e.target.value)}
+                required
               />
             </div>
 
@@ -58,6 +60,7 @@ const Contact = () => {
               onChange={(e) => settextarea(e.target.value)}
               rows={10}
               cols={30}
+              required
             />
           </div>
 

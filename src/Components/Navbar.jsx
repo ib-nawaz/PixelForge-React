@@ -18,7 +18,7 @@ const Navbar = () => {
                         PixelForge<span className="text-fuchsia-500">.</span>
                     </span>
                     <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-violet-600 to-fuchsia-500 text-white ring-4 ring-violet-100 shadow-lg shadow-violet-500/40 transition-all duration-300 group-hover:rotate-12 group-hover:scale-110 group-hover:ring-violet-200">
-                    <Layers3 size={24} className="fill-white" />
+                        <Layers3 size={24} className="fill-white" />
                     </span>
 
                 </NavLink>

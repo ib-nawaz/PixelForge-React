@@ -13,6 +13,7 @@ import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import NotFound from "./Components/NotFound";
 import ScrollToTop from "./Components/ScrollToTop";
+import Privacy from "./Components/Privacy";
 
 // Layout Component
 function Layout() {
@@ -73,6 +74,10 @@ const router = createBrowserRouter([
         path: "*",
         element: <NotFound />,
       },
+      {
+        path: '/privacy',
+        element: <Privacy />
+      }
     ],
   },
 ]);
