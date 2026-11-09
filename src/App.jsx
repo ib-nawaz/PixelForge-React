@@ -1,5 +1,5 @@
 
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import "./App.css";
 import { RouterProvider, createBrowserRouter, Outlet, } from "react-router-dom";
 import { DarkWhite } from "./Components/Conetxt/context";
@@ -20,6 +20,8 @@ import { Toaster } from "react-hot-toast";
 
 function Layout() {
   const { darkMode } = useContext(DarkWhite);
+
+
 
   return (
     <div
@@ -98,8 +100,26 @@ const router = createBrowserRouter([
 
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
 
+  const [darkMode, setDarkMode] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    const savedMode = localStorage.getItem("darkMode");
+
+    if (savedMode !== null) {
+      setDarkMode(JSON.parse(savedMode));
+    }
+
+    setLoaded(true);
+  }, []);
+
+  useEffect(() => {
+    if (loaded) {
+      localStorage.setItem("darkMode", JSON.stringify(darkMode));
+    }
+  }, [darkMode, loaded]);
+  
   return (
     <DarkWhite.Provider value={{ darkMode, setDarkMode, }}>
       <Toaster
