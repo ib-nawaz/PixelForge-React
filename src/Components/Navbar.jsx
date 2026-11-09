@@ -32,13 +32,13 @@ const Navbar = () => {
             {/* Middle: Links */}
             <div className={`navbar-links flex items-center gap-5 ${menuOpen ? "navbar-links-open" : ""}`}>
 
-                <NavLink to='/home' onClick={closeMenu} className={({ isActive }) => `px-5 py-3.5 rounded-2xl text-sm font-medium transition-all duration-200 ${isActive ? "bg-purple-500 text-white ring-4 ring-purple-200" : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"}`}>Home</NavLink>
+                <NavLink to='/home' onClick={closeMenu} className={({ isActive }) => `px-5 py-3.5 rounded-2xl text-sm font-medium transition-all duration-200 ${isActive ? "bg-purple-500 text-white ring-4 ring-purple-200 p-3" : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"}`}>Home</NavLink>
 
-                <NavLink to='/services' onClick={closeMenu} className={({ isActive }) => `px-5 py-3.5 rounded-2xl text-sm font-medium transition-all duration-200 ${isActive ? "bg-purple-500 text-white ring-4 ring-purple-200" : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"}`}>Services</NavLink>
+                <NavLink to='/services' onClick={closeMenu} className={({ isActive }) => `px-5 py-3.5 rounded-2xl text-sm font-medium transition-all duration-200 ${isActive ? "bg-purple-500 text-white ring-4 ring-purple-200 p-3" : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"}`}>Services</NavLink>
 
-                <NavLink to='/ourwork' onClick={closeMenu} className={({ isActive }) => `px-5 py-3.5 rounded-2xl text-sm font-medium transition-all duration-200 ${isActive ? "bg-purple-500 text-white ring-4 ring-purple-200" : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"}`}>Our Work</NavLink>
+                <NavLink to='/ourwork' onClick={closeMenu} className={({ isActive }) => `px-5 py-3.5 rounded-2xl text-sm font-medium transition-all duration-200 ${isActive ? "bg-purple-500 text-white ring-4 ring-purple-200 p-3" : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"}`}>Our Work</NavLink>
 
-                <NavLink to='/contact' onClick={closeMenu} className={({ isActive }) => `px-5 py-3.5 rounded-2xl text-sm font-medium transition-all duration-200 ${isActive ? "bg-purple-500 text-white ring-4 ring-purple-200" : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"}`}>Contact</NavLink>
+                <NavLink to='/contact' onClick={closeMenu} className={({ isActive }) => `px-5 py-3.5 rounded-2xl text-sm font-medium transition-all duration-200 ${isActive ? "bg-purple-500 text-white ring-4 ring-purple-200 p-3" : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"}`}>Contact</NavLink>
 
                 {/* Mobile Contact */}
                 <NavLink to='/contact' onClick={closeMenu} className="mobile-contact">
@@ -64,7 +64,7 @@ const Navbar = () => {
                     />
                 )}
 
-                <NavLink to='/contact' className="navbar-contact group flex items-center gap-2 rounded-full bg-slate-900 px-5 py-2 text-sm font-semibold text-white transition duration-200 hover:bg-violet-600 hover:shadow-lg cursor-pointer">
+                <NavLink to='/contact' className="navbar-contact group flex items-center gap-2 rounded-full bg-slate-900 px-5 py-2 text-sm font-semibold text-white transition duration-200 hover:bg-violet-600 hover:shadow-lg cursor-pointer p-3">
                     Contact Us
                     <span className="transition-transform duration-200 group-hover:translate-x-1">
                         <ArrowRight size={14} />

@@ -12,6 +12,11 @@ const Footer = () => {
     const [subs, setsubs] = useState("")
 
     function Handle() {
+        if (!subs.includes("@") || !subs.includes(".") || subs.length < 3) {
+            toast.error("Please enter a valid email address!")
+            setsubs("")
+            return
+        }
         setsubs("")
         toast.success("ThankYou For Subscribe Us!")
     }
